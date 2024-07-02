@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(255, 208, 208);
+    color: white; /* Set text color to white for better contrast */
+}
+
+h1 {
+    color: rgb(58, 166, 185);
+    margin-left: 2.5rem;
+}
+
+.heading {
+    margin-left: 2.5rem;
+}
+
+.box {
+    display: flex;
+    margin-left: 1rem;
+    flex-wrap: wrap;
+}
+
+.content {
+    color: hsl(180, 6%, 23%);
+}
+
+.post {
+    background-color: rgb(255, 158, 170);
+    width: 300px;
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 5px #f5efef;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.post.deleted {
+    background-color: rgb(232, 197, 229); /* Change background color for deleted posts */
+}
+
+.user {
+    font-style: italic;
+    color: #19065e;
+}
+
+.btn {
+    margin-left: 2.5rem;
+    height: 40px;
+    width: 150px;
+    background-color: hsl(180, 33%, 64%);
+}
+
+.btn a {
+    color: black;
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+}
+
+.see_btn {
+    width: 110px;
+    height: 30px;
+    margin-left: 6rem;
+    margin-top:0.5rem;
+}
+
+.see_btn a {
+    color: black;
+}
+
+.delete-form {
+    display: flex;
+    justify-content: center;
+}
+
+.delete {
+    margin-top: 0.5rem;
+    background-color: hwb(0 36% 55%);
+    color: hwb(0 92% 8%);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.deleted-message {
+    color: red; /* Style the deleted message */
+    font-style: italic;
+    margin-top: 0.5rem;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css" /> 
+</head>
+<body>
+    <h1 class="heading">To Do List</h1>
+    <div class="box">
+        <% for(let post of posts) { %>
+            <div class="post<%= post.deleted ? ' deleted' : '' %>">
+                <h3 class="user">@ <%= post.username %></h3>
+                <h4 class="content"><%= post.content %></h4>
+                <br>
+                <% if (!post.deleted) { %>
+                    <button class="see_btn"><a href="/posts/<%= post.id %>">See in Detail</a></button>
+                    <button class="see_btn"><a href="/posts/<%= post.id %>/edit">Edit Task</a></button>
+                    <form method="post" action="/posts/<%= post.id %>?_method=DELETE" class="delete-form">
+                        <button class="delete">Delete Task</button>
+                    </form>
+                <% } else { %>
+                    <p class="deleted-message">This task has been completed.</p>
+                <% } %>
+            </div>
+        <% } %>
+    </div>
+    <br>
+    <button class="btn"><a href="/posts/new">NEW TASK</a></button>
+</body>
+</html>
